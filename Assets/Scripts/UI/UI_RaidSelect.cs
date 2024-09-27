@@ -13,9 +13,8 @@ public class UI_RaidSelect : UI_Popup
     //*****************************
     private int raidnum = 6;
     public ScrollRect scrollRect;
-    public SessionSetup sessionSetup;
     public UIScreen SelectScreen;
-    public UIScreen RoomScreen;
+    public UIScreen PopupScreen;
     //*****************************
 
     enum Buttons
@@ -57,6 +56,6 @@ public class UI_RaidSelect : UI_Popup
     public void NextButtonClicked(PointerEventData eventData)
     {
         Debug.Log("NextButton Clicked");
-        sessionSetup.TryCreateSession();
+        SelectScreen.FocusScreen(PopupScreen);
     }
 }
